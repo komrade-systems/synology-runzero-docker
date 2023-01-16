@@ -1,6 +1,6 @@
 ## RunZero Network Explorer on Synology NAS
 
-This will show you how to deploy RunZero Network Explorer in a non-persistent container, on a Synology NAS using Docker. Comments and Wireless scanning have been stripped from the Dockerfile because they break it for some reason in DSM. You can learn more about RunZero here https://www.runzero.com
+This will show you how to deploy RunZero Network Explorer in a non-persistent container, on a Synology NAS using Docker. Comments and Wireless scanning have been stripped from the Dockerfile because they break it for some reason in DSM. This Dockerfile also uses `ubuntu:latest` instead of `debian:stable-slim` like is listed in the official docs. You can learn more about RunZero here https://www.runzero.com
  
 PREREQUISITES
 - Synology NAS using DSM 7
@@ -10,8 +10,27 @@ PREREQUISITES
 TESTED ON
 - DS220+
 
+### Dockerfile contents
+
+>FROM ubuntu:latest
+>
+>WORKDIR /opt/rumble
+>
+>ENV AGENT_URL=https://console.runzero.com/download/explorer/DT[uniqueToken]/[verzionID]]/runzero-explorer-linux-amd64.bin
+>
+>ENV RUMBLE_AGENT_HOST_ID=hex string identifier
+>
+>ENV RUMBLE_AGENT_LOG_DEBUG=false
+>
+>ADD ${AGENT_URL} runzero-explorer.bin
+>
+>RUN chmod +x runzero-explorer.bin
+>
+>USER root
+>
+>ENTRYPOINT [ "/opt/rumble/runzero-explorer.bin", "manual"]``
  
-For non-persistent containers an Explorer identifier needs to be persisted through an environment variable. You can set the **RUMBLE_AGENT_HOST_ID** to a unique string to identify the explorer in your org.
+The argument `manual` tells runZero not to look for SystemD or upstart. For non-persistent containers an Explorer identifier needs to be persisted through an environment variable. You can set the `RUMBLE_AGENT_HOST_ID` to a unique string to identify the explorer in your org.
 
 To generate a suitable identifier, the openssl tool may be used:
 
