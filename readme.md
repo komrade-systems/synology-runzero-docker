@@ -27,6 +27,7 @@ Navigate to the runzero folder that you created earlier.
 Perform the following (you can change the name or tag to whatever you like)
 
 `sudo docker build -t “synology:runzero” .`
+
 `sudo docker run —-name=“runzero” synology:runzero`
 
 Initially the container will have broken networking, look in the logs to find the IP/Subnet that docker is using for the container
