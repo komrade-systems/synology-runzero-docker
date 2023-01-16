@@ -1,6 +1,8 @@
 ## RunZero Network Explorer on Synology NAS
 
-This will show you how to deploy RunZero Network Explorer in a non-persistent container, on a Synology NAS using Docker. Comments and Wireless scanning have been stripped from the Dockerfile because they break it for some reason in DSM. This Dockerfile also uses `ubuntu:latest` instead of `debian:stable-slim` like is listed in the official docs. You can learn more about RunZero here https://www.runzero.com
+This will show you how to deploy RunZero Network Explorer in a non-persistent container, on a Synology NAS using Docker. Comments and Wireless scanning have been stripped from the Dockerfile because they break it for some reason in DSM. This Dockerfile also uses `ubuntu:latest` instead of `debian:stable-slim` like is listed in the official docs. You can learn more about RunZero here https://www.runzero.com 
+
+Shout out to Pearce Barry @ RunZero Engineering for helping with this.
  
 PREREQUISITES
 - Synology NAS using DSM 7
