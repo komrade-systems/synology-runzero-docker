@@ -1,14 +1,17 @@
-Instructions on how to deploy RunZero Network Explorer in a non-persistent container, on a Synology NAS using Docker. Comments and Wireless scanning have been stripped from the Dockerfile because they break it for some reason in DSM. 
+## RunZero Network Explorer on Synology NAS
 
-
-Tested on Synology DS220+ 
-
+This will show you how to deploy RunZero Network Explorer in a non-persistent container, on a Synology NAS using Docker. Comments and Wireless scanning have been stripped from the Dockerfile because they break it for some reason in DSM. You can learn more about RunZero here https://www.runzero.com
+ 
 PREREQUISITES
 - Synology NAS using DSM 7
 - Docker
 - Knowledge on how to set firewall settings on your Synology.
 
-For non-persistent containers an Explorer identifier needs to be persisted through an environment variable. You can set the RUMBLE_AGENT_HOST_ID to a unique string to identify the explorer in your org.
+TESTED ON
+- DS220+
+
+ 
+For non-persistent containers an Explorer identifier needs to be persisted through an environment variable. You can set the **RUMBLE_AGENT_HOST_ID** to a unique string to identify the explorer in your org.
 
 To generate a suitable identifier, the openssl tool may be used:
 
