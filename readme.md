@@ -5,7 +5,7 @@ This will show you how to deploy RunZero Network Explorer in a non-persistent co
 PREREQUISITES
 - Synology NAS using DSM 7
 - Docker
-- Knowledge on how to set firewall settings on your Synology.
+- Knowledge on how to set firewall settings and ports on your Synology.
 
 TESTED ON
 - DS220+
