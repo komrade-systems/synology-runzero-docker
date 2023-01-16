@@ -31,11 +31,11 @@ Perform the following (you can change the name or tag to whatever you like)
 
 Initially the container will have broken networking, look in the logs to find the IP/Subnet that docker is using for the container
 
-<screenshot here>
+![](screenshots/container-terminal-log.jpeg)
 
 Once you have this info, stop the container, select it and edit the container details. RunZero needs port 443 to run, and it appears 53. Input the values in to port section of the container settings for the container, and leave it to Auto for local. You may need to adjust your Synology Firewall
 
-<screenshot here>
+![](screenshots/runzero-docker-ports.jpeg)
 
 Start the container again, and it should connect and register to the rumble console.
 
