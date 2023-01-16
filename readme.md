@@ -41,6 +41,8 @@ Once you have this info, stop the container, select it and edit the container de
 
 ![](screenshots/runzero-docker-ports.jpeg)
 
+Optionally, you can add the entire subnet docker is using as well
+
 ![](screenshots/firewall-example.jpeg)
 
 Start the container again, and it should connect and register to the rumble console.
