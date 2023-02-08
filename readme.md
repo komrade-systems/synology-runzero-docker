@@ -18,7 +18,7 @@ TESTED ON
 >
 >WORKDIR /opt/rumble
 >
->ENV AGENT_URL=https://console.runzero.com/download/explorer/DT[uniqueToken]/[verzionID]]/runzero-explorer-linux-amd64.bin
+>ENV AGENT_URL=https://console.runzero.com/download/explorer/DT[uniqueToken]/[versionID]]/runzero-explorer-linux-amd64.bin
 >
 >ENV RUMBLE_AGENT_HOST_ID=hex string identifier
 >
